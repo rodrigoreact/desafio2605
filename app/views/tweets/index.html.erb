@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<h1>Tweets de este clone de Twitter</h1>
+<div class="card w-75">
+  <div class="card-body"> 
+    <p class="card-text">
+      <div id="tweets">
+        <% @tweets.each do |tweet| %>
+          <%= render tweet %>
+         
+            <%= link_to "Mostrar este tweet", tweet %>
+         
+          <% end %>
+        </div>
+      </div>
+    </p>  
+</div>
+<div class="container">
+<%= link_to "Nuevo tweet", new_tweet_path %>
+</div>
+
